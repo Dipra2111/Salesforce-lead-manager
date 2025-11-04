@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Lead Management" icon-name="standard:lead">
+        <div class="slds-p-around_medium">
+            <lightning-input label="Name" value={name} data-id="name" onchange={handleInput}></lightning-input>
+            <lightning-input label="Email" value={email} data-id="email" onchange={handleInput}></lightning-input>
+            <lightning-input label="Phone" value={phone} data-id="phone" onchange={handleInput}></lightning-input>
+            <div class="slds-m-top_small">
+                <lightning-button label="Add Lead" onclick={addLead} variant="brand"></lightning-button>
+            </div>
+        </div>
+
+        <template if:true={leads}>
+            <lightning-datatable
+                key-field="Id"
+                data={leads}
+                columns={columns}
+                onrowaction={handleRowAction}
+                hide-checkbox-column>
+            </lightning-datatable>
+        </template>
+        <template if:true={error}>
+            <div class="slds-p-around_medium slds-text-color_error">{error}</div>
+        </template>
+    </lightning-card>
+</template>

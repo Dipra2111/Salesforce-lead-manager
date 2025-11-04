@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>LeadController</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>LeadTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>Lead__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>leadManager</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <version>58.0</version>
+</Package>
